@@ -34,6 +34,10 @@ Para listar seus tópicos, use o seguinte comando:
 
 `kafka-topics --list --bootstrap-server=localhost:9092`
 
+Para retornar um resumo dos seus tópico especificado, use o seguinte comando:
+
+`kafka-topics --bootstrap-server=localhost:9092 --topic=teste --describe`
+
 ## Módulo 03 - Desenvolvendo Produtor e Consumidor
 
 ## Módulo 04 - Kafka Connect
