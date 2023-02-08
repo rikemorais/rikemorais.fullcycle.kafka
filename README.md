@@ -14,29 +14,41 @@ Itens do Docker Compose:
 - Kafka
 - Control Center
 
-Para rodar o Docker-Compose, basta rodar o comando: 
+Rodando o Docker-Compose: 
 
 `docker-compose up -d`. 
 
-Para visualizar a lista de Imagens, rode o comando: 
+Visualizar a Lista de Imagens: 
 
 `docker ps` 
 
-Para rodar a imagem específica da lista, use o comando: 
+Rodar uma Imagem Específica da Lista: 
 
 `docker exec -it nome da imagem bash`
 
-Para criar o seu primeiro tópico, use o seguinte comando:
+Criar o Seu Primeiro Tópico:
 
 `kafka-topics --create --topic=teste --bootstrap-server=localhost:9092 --partitions=3`
 
-Para listar seus tópicos, use o seguinte comando:
+Listar Seus Tópicos:
 
 `kafka-topics --list --bootstrap-server=localhost:9092`
 
-Para retornar um resumo dos seus tópico especificado, use o seguinte comando:
+Retornar um Resumo dos Seus Tópicos Especificados:
 
 `kafka-topics --bootstrap-server=localhost:9092 --topic=teste --describe`
+
+Consumir um Tópico:
+
+`kafka-console-consumer --bootstrap-server=localhost:9092 --topic=teste`
+
+Enviar uma Mensagem:
+
+`kafka-console-producer --bootstrap-server=localhost:9092 --topic=teste`
+
+Consumir um Tópico Desde o Início dos Envios:
+
+`kafka-console-consumer --bootstrap-server=localhost:9092 --topic=teste --from-beginning`
 
 ## Módulo 03 - Desenvolvendo Produtor e Consumidor
 
